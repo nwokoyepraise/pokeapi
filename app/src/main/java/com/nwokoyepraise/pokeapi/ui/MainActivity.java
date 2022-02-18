@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         activityMainBinding.setViewModel(mainViewModel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 );
         activityMainBinding.executePendingBindings();
 
+        //watch changes in viewModel
         mainViewModel.getResponse().observe(this, response ->{
             TextView tv = findViewById(R.id.tv);
             tv.setText(response);
